@@ -1,0 +1,1627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20201222 11:17:59.219" rpa="false">
+<suite id="s1" name="RobotFrameWork" source="D:\KGnan32\RobotFrameWork">
+<suite id="s1-s1" name="Application" source="D:\KGnan32\RobotFrameWork\Application">
+<suite id="s1-s1-s1" name="TestSuites" source="D:\KGnan32\RobotFrameWork\Application\TestSuites">
+<suite id="s1-s1-s1-s1" name="Assignment02" source="D:\KGnan32\RobotFrameWork\Application\TestSuites\Assignment02.robot">
+<test id="s1-s1-s1-s1-t1" name="User Registration">
+<kw name="Launch the Browser and Go to MyStore" library="HomePage" type="setup">
+<doc>Keyword to launch the specified browser and navigates to MyStore URL</doc>
+<arguments>
+<arg>${BROWSER_NAME}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${MY_STORE_URL}</arg>
+<arg>${browser_name}</arg>
+<arg>executable_path=${CHROME_DRIVE_PATH}</arg>
+</arguments>
+<msg timestamp="20201222 11:17:59.885" level="INFO">Opening browser 'Chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20201222 11:17:59.885" endtime="20201222 11:18:17.104"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${home_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:17.114" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20201222 11:18:17.105" endtime="20201222 11:18:17.114"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201222 11:18:17.115" endtime="20201222 11:18:19.279"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${s_wait}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:19.279" endtime="20201222 11:18:19.281"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:17:59.884" endtime="20201222 11:18:19.282"></status>
+</kw>
+<kw name="Navigate To My Store SignIn Page" library="HomePage">
+<doc>Keyword to Navaigate to User SignIn option</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${homePageTitle}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:19.288" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20201222 11:18:19.283" endtime="20201222 11:18:19.288"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${sign_in_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:19.289" endtime="20201222 11:18:19.310"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:19.311" level="INFO">Clicking element 'jquery=.login'.</msg>
+<status status="PASS" starttime="20201222 11:18:19.311" endtime="20201222 11:18:23.014"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:19.288" endtime="20201222 11:18:23.014"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${login_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:23.042" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:18:23.015" endtime="20201222 11:18:23.043"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:19.282" endtime="20201222 11:18:23.043"></status>
+</kw>
+<kw name="Create Account" library="LoginPage">
+<doc>Keyword to create account with sepecfied Email</doc>
+<arguments>
+<arg>${user_details}[eMailId]</arg>
+</arguments>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${create_account_email_loc}</arg>
+<arg>${sWait}</arg>
+<arg>${eMailId_txt}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:23.047" endtime="20201222 11:18:23.107"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:23.108" endtime="20201222 11:18:23.268"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:23.270" level="INFO">Typing text 'asdgeehjjj0001.kjd@gmail.com' into text field 'jquery=#email_create'.</msg>
+<status status="PASS" starttime="20201222 11:18:23.269" endtime="20201222 11:18:23.448"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:23.045" endtime="20201222 11:18:23.448"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${create_account_btn_loc}</arg>
+<arg>${sWait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:23.451" endtime="20201222 11:18:23.482"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:23.483" level="INFO">Clicking element 'jquery=#SubmitCreate'.</msg>
+<status status="PASS" starttime="20201222 11:18:23.482" endtime="20201222 11:18:23.582"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:23.449" endtime="20201222 11:18:23.583"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${login_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:23.588" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:18:23.583" endtime="20201222 11:18:23.589"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:23.044" endtime="20201222 11:18:23.589"></status>
+</kw>
+<kw name="Fill Personal Info" library="LoginPage">
+<doc>Keyword to enter personal information in create account form.</doc>
+<arguments>
+<arg>${user_details}[gender]</arg>
+<arg>${user_details}[first_name]</arg>
+<arg>${user_details}[last_name]</arg>
+<arg>${user_details}[password]</arg>
+</arguments>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${login_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:23.595" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:18:23.590" endtime="20201222 11:18:23.596"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${choose_gender_Mr._Mrs.}'=='Mr.'</arg>
+<arg>Select Radio Button</arg>
+<arg>${gender_group_loc}</arg>
+<arg>${gender_1}</arg>
+<arg>ELSE IF</arg>
+<arg>'${choose_gender_Mr._Mrs.}'=='Mrs.'</arg>
+<arg>Select Radio Button</arg>
+<arg>${gender_group_loc}</arg>
+<arg>${gender_2}</arg>
+<arg>ELSE</arg>
+<arg>Fail</arg>
+<arg>specified gender not found.</arg>
+</arguments>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>${gender_group_loc}</arg>
+<arg>${gender_1}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:23.598" level="INFO">Selecting '1' from radio button 'id_gender'.</msg>
+<status status="PASS" starttime="20201222 11:18:23.597" endtime="20201222 11:18:25.636"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:23.596" endtime="20201222 11:18:25.637"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${first_name_loc}</arg>
+<arg>${sWait}</arg>
+<arg>${first_name}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:25.640" endtime="20201222 11:18:25.672"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:25.673" endtime="20201222 11:18:25.731"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:25.732" level="INFO">Typing text 'Gnaneshwar' into text field 'jquery=#customer_firstname'.</msg>
+<status status="PASS" starttime="20201222 11:18:25.731" endtime="20201222 11:18:25.942"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:25.638" endtime="20201222 11:18:25.942"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${last_name_loc}</arg>
+<arg>${sWait}</arg>
+<arg>${last_name}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:25.946" endtime="20201222 11:18:25.987"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:25.989" endtime="20201222 11:18:26.060"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:26.062" level="INFO">Typing text 'K' into text field 'jquery=#customer_lastname'.</msg>
+<status status="PASS" starttime="20201222 11:18:26.060" endtime="20201222 11:18:26.303"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:25.945" endtime="20201222 11:18:26.304"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${enter_password_loc}</arg>
+<arg>${sWait}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:26.307" endtime="20201222 11:18:26.346"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:26.347" endtime="20201222 11:18:26.425"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:26.425" level="INFO">Typing text 'TempPassword' into text field 'jquery=#passwd'.</msg>
+<status status="PASS" starttime="20201222 11:18:26.425" endtime="20201222 11:18:26.592"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:26.306" endtime="20201222 11:18:26.593"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:23.589" endtime="20201222 11:18:26.593"></status>
+</kw>
+<kw name="Fill Address" library="LoginPage">
+<doc>Keyword to enter Address in create account form.</doc>
+<arguments>
+<arg>${user_address}[address]</arg>
+<arg>${user_address}[city]</arg>
+<arg>${user_address}[state]</arg>
+<arg>${user_address}[postal_code]</arg>
+<arg>${user_address}[country]</arg>
+<arg>${user_address}[mobileNo]</arg>
+<arg>${user_address}[address_alias]</arg>
+</arguments>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${login_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:26.607" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:18:26.598" endtime="20201222 11:18:26.610"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${address_loc}</arg>
+<arg>${sWait}</arg>
+<arg>${address}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:26.613" endtime="20201222 11:18:26.649"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:26.649" endtime="20201222 11:18:26.708"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:26.716" level="INFO">Typing text 'H.NO: 8-9, Hyderabad.' into text field 'jquery=#address1'.</msg>
+<status status="PASS" starttime="20201222 11:18:26.716" endtime="20201222 11:18:26.894"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:26.611" endtime="20201222 11:18:26.894"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${city_loc}</arg>
+<arg>${sWait}</arg>
+<arg>${city}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:26.894" endtime="20201222 11:18:26.936"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:26.936" endtime="20201222 11:18:26.974"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:26.978" level="INFO">Typing text 'Hyderabad' into text field 'jquery=#city'.</msg>
+<status status="PASS" starttime="20201222 11:18:26.978" endtime="20201222 11:18:27.114"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:26.894" endtime="20201222 11:18:27.115"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${state_loc}</arg>
+<arg>${state}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:27.115" level="INFO">Selecting options from selection list 'jquery=#id_state' by label Oklahoma.</msg>
+<status status="PASS" starttime="20201222 11:18:27.115" endtime="20201222 11:18:27.255"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${post_code_loc}</arg>
+<arg>${sWait}</arg>
+<arg>${postal_code_txt}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:27.255" endtime="20201222 11:18:27.289"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:27.290" endtime="20201222 11:18:27.346"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:27.349" level="INFO">Typing text '55555' into text field 'jquery=#postcode'.</msg>
+<status status="PASS" starttime="20201222 11:18:27.348" endtime="20201222 11:18:27.505"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:27.255" endtime="20201222 11:18:27.506"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${country_loc}</arg>
+<arg>${country}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:27.506" level="INFO">Selecting options from selection list 'jquery=#id_country' by label United States.</msg>
+<status status="PASS" starttime="20201222 11:18:27.506" endtime="20201222 11:18:27.574"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${mobile_no_loc}</arg>
+<arg>${sWait}</arg>
+<arg>${mobile_no}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:27.575" endtime="20201222 11:18:27.607"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:27.608" endtime="20201222 11:18:27.683"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:27.691" level="INFO">Typing text '1100001234' into text field 'jquery=#phone_mobile'.</msg>
+<status status="PASS" starttime="20201222 11:18:27.683" endtime="20201222 11:18:27.871"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:27.574" endtime="20201222 11:18:27.871"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${address_alias_loc}</arg>
+<arg>${sWait}</arg>
+<arg>${address_alias_txt}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:27.876" endtime="20201222 11:18:27.915"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:27.915" endtime="20201222 11:18:28.004"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:28.006" level="INFO">Typing text 'H.NO: 8-9, Hyderabad' into text field 'jquery=#alias'.</msg>
+<status status="PASS" starttime="20201222 11:18:28.005" endtime="20201222 11:18:28.211"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:27.875" endtime="20201222 11:18:28.211"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:26.594" endtime="20201222 11:18:28.211"></status>
+</kw>
+<kw name="Submit User Registration" library="LoginPage">
+<doc>Keyword to register the user</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${login_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:28.225" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:18:28.211" endtime="20201222 11:18:28.226"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${register_user_btn_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:28.228" endtime="20201222 11:18:28.268"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:28.269" level="INFO">Clicking element 'jquery=#submitAccount'.</msg>
+<status status="PASS" starttime="20201222 11:18:28.268" endtime="20201222 11:18:30.824"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:28.226" endtime="20201222 11:18:30.825"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${myStoreTitle}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:30.832" level="INFO">Page title is 'My account - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:18:30.825" endtime="20201222 11:18:30.832"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:28.211" endtime="20201222 11:18:30.833"></status>
+</kw>
+<kw name="Logout from MyStore" library="HomePage">
+<doc>Keyword to logout from the MyStore application</doc>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${logout_btn_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:30.834" endtime="20201222 11:18:30.860"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:30.861" level="INFO">Clicking element 'jquery=.logout'.</msg>
+<status status="PASS" starttime="20201222 11:18:30.861" endtime="20201222 11:18:34.533"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:30.834" endtime="20201222 11:18:34.534"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${sign_in_loc}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:34.534" endtime="20201222 11:18:34.560"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:30.833" endtime="20201222 11:18:34.560"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201222 11:18:34.561" endtime="20201222 11:18:36.924"></status>
+</kw>
+<doc>Test case for verifying user registration</doc>
+<tags>
+<tag>Registration</tag>
+</tags>
+<status status="PASS" starttime="20201222 11:17:59.884" endtime="20201222 11:18:36.924" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-t2" name="User Login">
+<kw name="Launch the Browser and Go to MyStore" library="HomePage" type="setup">
+<doc>Keyword to launch the specified browser and navigates to MyStore URL</doc>
+<arguments>
+<arg>${BROWSER_NAME}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${MY_STORE_URL}</arg>
+<arg>${browser_name}</arg>
+<arg>executable_path=${CHROME_DRIVE_PATH}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:36.931" level="INFO">Opening browser 'Chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20201222 11:18:36.930" endtime="20201222 11:18:47.742"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${home_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:47.752" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20201222 11:18:47.743" endtime="20201222 11:18:47.752"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201222 11:18:47.753" endtime="20201222 11:18:49.927"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${s_wait}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:49.927" endtime="20201222 11:18:49.929"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:36.928" endtime="20201222 11:18:49.930"></status>
+</kw>
+<kw name="Navigate To My Store SignIn Page" library="HomePage">
+<doc>Keyword to Navaigate to User SignIn option</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${homePageTitle}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:49.939" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20201222 11:18:49.930" endtime="20201222 11:18:49.941"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${sign_in_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:49.941" endtime="20201222 11:18:49.974"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:49.975" level="INFO">Clicking element 'jquery=.login'.</msg>
+<status status="PASS" starttime="20201222 11:18:49.974" endtime="20201222 11:18:52.725"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:49.941" endtime="20201222 11:18:52.725"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${login_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:52.732" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:18:52.726" endtime="20201222 11:18:52.732"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:49.930" endtime="20201222 11:18:52.732"></status>
+</kw>
+<kw name="Login To My Store" library="LoginPage">
+<doc>Keyword to login to Automation practice WebApplication</doc>
+<arguments>
+<arg>${user_details}[eMailId]</arg>
+<arg>${user_details}[password]</arg>
+</arguments>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${login_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:52.742" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:18:52.732" endtime="20201222 11:18:52.742"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${eMailId_loc}</arg>
+<arg>${s_Wait}</arg>
+<arg>${userName}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:52.743" endtime="20201222 11:18:52.767"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:52.767" endtime="20201222 11:18:52.808"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:52.808" level="INFO">Typing text 'asdgeehjjj0001.kjd@gmail.com' into text field 'jquery=#email'.</msg>
+<status status="PASS" starttime="20201222 11:18:52.808" endtime="20201222 11:18:52.912"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:52.742" endtime="20201222 11:18:52.912"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${password_loc}</arg>
+<arg>${s_wait}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:52.914" endtime="20201222 11:18:52.933"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:52.934" endtime="20201222 11:18:52.974"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:52.975" level="INFO">Typing text 'TempPassword' into text field 'jquery=#passwd'.</msg>
+<status status="PASS" starttime="20201222 11:18:52.974" endtime="20201222 11:18:53.066"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:52.913" endtime="20201222 11:18:53.066"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${submit_btn_loc}</arg>
+<arg>${s_Wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:53.067" endtime="20201222 11:18:53.085"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:53.085" level="INFO">Clicking element 'jquery=#SubmitLogin'.</msg>
+<status status="PASS" starttime="20201222 11:18:53.085" endtime="20201222 11:18:56.192"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:53.066" endtime="20201222 11:18:56.194"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${myStoreTitle}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:56.204" level="INFO">Page title is 'My account - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:18:56.195" endtime="20201222 11:18:56.205"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:52.732" endtime="20201222 11:18:56.205"></status>
+</kw>
+<kw name="Logout from MyStore" library="HomePage">
+<doc>Keyword to logout from the MyStore application</doc>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${logout_btn_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:56.210" endtime="20201222 11:18:56.242"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:18:56.243" level="INFO">Clicking element 'jquery=.logout'.</msg>
+<status status="PASS" starttime="20201222 11:18:56.243" endtime="20201222 11:18:59.303"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:56.208" endtime="20201222 11:18:59.304"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${sign_in_loc}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:18:59.304" endtime="20201222 11:18:59.328"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:18:56.207" endtime="20201222 11:18:59.329"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201222 11:18:59.330" endtime="20201222 11:19:01.721"></status>
+</kw>
+<doc>Test to verify whether user is able to login with appropriate credentials</doc>
+<tags>
+<tag>Login</tag>
+</tags>
+<status status="PASS" starttime="20201222 11:18:36.926" endtime="20201222 11:19:01.722" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-t3" name="Search For a Product and Add it to Cart">
+<kw name="Launch the Browser and Go to MyStore" library="HomePage" type="setup">
+<doc>Keyword to launch the specified browser and navigates to MyStore URL</doc>
+<arguments>
+<arg>${BROWSER_NAME}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${MY_STORE_URL}</arg>
+<arg>${browser_name}</arg>
+<arg>executable_path=${CHROME_DRIVE_PATH}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:01.732" level="INFO">Opening browser 'Chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20201222 11:19:01.730" endtime="20201222 11:19:12.827"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${home_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:12.834" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:12.827" endtime="20201222 11:19:12.834"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201222 11:19:12.834" endtime="20201222 11:19:15.002"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${s_wait}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:15.002" endtime="20201222 11:19:15.006"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:01.724" endtime="20201222 11:19:15.007"></status>
+</kw>
+<kw name="Navigate To My Store SignIn Page" library="HomePage">
+<doc>Keyword to Navaigate to User SignIn option</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${homePageTitle}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:15.015" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:15.007" endtime="20201222 11:19:15.015"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${sign_in_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:15.021" endtime="20201222 11:19:15.051"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:15.051" level="INFO">Clicking element 'jquery=.login'.</msg>
+<status status="PASS" starttime="20201222 11:19:15.051" endtime="20201222 11:19:17.764"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:15.020" endtime="20201222 11:19:17.765"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${login_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:17.771" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:17.765" endtime="20201222 11:19:17.771"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:15.007" endtime="20201222 11:19:17.772"></status>
+</kw>
+<kw name="Login To My Store" library="LoginPage">
+<doc>Keyword to login to Automation practice WebApplication</doc>
+<arguments>
+<arg>${user_details}[eMailId]</arg>
+<arg>${user_details}[password]</arg>
+</arguments>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${login_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:17.778" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:17.773" endtime="20201222 11:19:17.779"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${eMailId_loc}</arg>
+<arg>${s_Wait}</arg>
+<arg>${userName}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:17.779" endtime="20201222 11:19:17.803"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:17.803" endtime="20201222 11:19:17.840"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:17.842" level="INFO">Typing text 'asdgeehjjj0001.kjd@gmail.com' into text field 'jquery=#email'.</msg>
+<status status="PASS" starttime="20201222 11:19:17.841" endtime="20201222 11:19:17.944"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:17.779" endtime="20201222 11:19:17.945"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${password_loc}</arg>
+<arg>${s_wait}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:17.946" endtime="20201222 11:19:17.966"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:17.967" endtime="20201222 11:19:18.007"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:18.007" level="INFO">Typing text 'TempPassword' into text field 'jquery=#passwd'.</msg>
+<status status="PASS" starttime="20201222 11:19:18.007" endtime="20201222 11:19:18.092"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:17.945" endtime="20201222 11:19:18.092"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${submit_btn_loc}</arg>
+<arg>${s_Wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:18.093" endtime="20201222 11:19:18.112"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:18.113" level="INFO">Clicking element 'jquery=#SubmitLogin'.</msg>
+<status status="PASS" starttime="20201222 11:19:18.112" endtime="20201222 11:19:19.690"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:18.093" endtime="20201222 11:19:19.690"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${myStoreTitle}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:19.696" level="INFO">Page title is 'My account - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:19.691" endtime="20201222 11:19:19.696"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:17.772" endtime="20201222 11:19:19.697"></status>
+</kw>
+<kw name="Add Product To Cart" library="MyStorePage">
+<doc>Seraches for the specified product and adds it to the cart</doc>
+<arguments>
+<arg>${add_product_to_cart}[product_name]</arg>
+</arguments>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${myStoreTitle}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:19.701" level="INFO">Page title is 'My account - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:19.698" endtime="20201222 11:19:19.702"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${search_bar_loc}</arg>
+<arg>${s_wait}</arg>
+<arg>${product_name}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:19.703" endtime="20201222 11:19:19.724"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:19.725" endtime="20201222 11:19:19.759"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:19.760" level="INFO">Typing text 'Printed Chiffon Dress' into text field 'jquery=#search_query_top'.</msg>
+<status status="PASS" starttime="20201222 11:19:19.760" endtime="20201222 11:19:19.845"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:19.702" endtime="20201222 11:19:19.845"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${search_option_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:19.846" endtime="20201222 11:19:19.873"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:19.875" level="INFO">Clicking element 'jquery=.btn.btn-default.button-search'.</msg>
+<status status="PASS" starttime="20201222 11:19:19.874" endtime="20201222 11:19:23.275"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:19.845" endtime="20201222 11:19:23.276"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${first_T_shirt_loc}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:23.279" level="INFO">Simulating Mouse Over on element 'jquery=.product-image-container a'.</msg>
+<status status="PASS" starttime="20201222 11:19:23.277" endtime="20201222 11:19:23.570"></status>
+</kw>
+<kw name="Find Product with Name" library="MyStorePage">
+<doc>Keyword to find the sepcified product in the "Search - My Store" page</doc>
+<arguments>
+<arg>${product_name}</arg>
+</arguments>
+<assign>
+<var>${addToCart}</var>
+</assign>
+<msg timestamp="20201222 11:19:23.571" level="INFO">${addToCart} = xpath=//a[normalize-space()='Printed Chiffon Dress']/parent::h5/parent::div/div/a/span[text()='Add to cart']</msg>
+<status status="PASS" starttime="20201222 11:19:23.570" endtime="20201222 11:19:23.572"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${addToCart}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:23.573" endtime="20201222 11:19:23.607"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:23.607" level="INFO">Clicking element 'xpath=//a[normalize-space()='Printed Chiffon Dress']/parent::h5/parent::div/div/a/span[text()='Add to cart']'.</msg>
+<status status="PASS" starttime="20201222 11:19:23.607" endtime="20201222 11:19:23.675"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:23.572" endtime="20201222 11:19:23.675"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${added_to_cart_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:23.675" endtime="20201222 11:19:24.875"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${close_pop_up_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:24.876" endtime="20201222 11:19:24.894"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:24.894" level="INFO">Clicking element 'jquery=.cross'.</msg>
+<status status="PASS" starttime="20201222 11:19:24.894" endtime="20201222 11:19:24.943"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:24.875" endtime="20201222 11:19:24.944"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:19.697" endtime="20201222 11:19:24.944"></status>
+</kw>
+<kw name="Logout from MyStore" library="HomePage">
+<doc>Keyword to logout from the MyStore application</doc>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${logout_btn_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:24.947" endtime="20201222 11:19:24.974"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:24.975" level="INFO">Clicking element 'jquery=.logout'.</msg>
+<status status="PASS" starttime="20201222 11:19:24.975" endtime="20201222 11:19:27.909"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:24.946" endtime="20201222 11:19:27.909"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${sign_in_loc}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:27.909" endtime="20201222 11:19:27.935"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:24.946" endtime="20201222 11:19:27.937"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201222 11:19:27.938" endtime="20201222 11:19:30.340"></status>
+</kw>
+<doc>Test case to search for a dress and add it to cart.</doc>
+<tags>
+<tag>Add to Cart</tag>
+</tags>
+<status status="PASS" starttime="20201222 11:19:01.723" endtime="20201222 11:19:30.341" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-s1-t4" name="Navigate To T-Shirts and Add a Product to Cart">
+<kw name="Launch the Browser and Go to MyStore" library="HomePage" type="setup">
+<doc>Keyword to launch the specified browser and navigates to MyStore URL</doc>
+<arguments>
+<arg>${BROWSER_NAME}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${MY_STORE_URL}</arg>
+<arg>${browser_name}</arg>
+<arg>executable_path=${CHROME_DRIVE_PATH}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:30.344" level="INFO">Opening browser 'Chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20201222 11:19:30.344" endtime="20201222 11:19:42.209"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${home_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:42.220" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:42.210" endtime="20201222 11:19:42.221"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201222 11:19:42.221" endtime="20201222 11:19:44.408"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${s_wait}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:44.409" endtime="20201222 11:19:44.412"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:30.344" endtime="20201222 11:19:44.413"></status>
+</kw>
+<kw name="Navigate To My Store SignIn Page" library="HomePage">
+<doc>Keyword to Navaigate to User SignIn option</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${homePageTitle}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:44.421" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:44.415" endtime="20201222 11:19:44.422"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${sign_in_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:44.423" endtime="20201222 11:19:44.451"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:44.452" level="INFO">Clicking element 'jquery=.login'.</msg>
+<status status="PASS" starttime="20201222 11:19:44.452" endtime="20201222 11:19:47.778"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:44.423" endtime="20201222 11:19:47.779"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${login_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:47.784" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:47.779" endtime="20201222 11:19:47.785"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:44.413" endtime="20201222 11:19:47.785"></status>
+</kw>
+<kw name="Login To My Store" library="LoginPage">
+<doc>Keyword to login to Automation practice WebApplication</doc>
+<arguments>
+<arg>${user_details}[eMailId]</arg>
+<arg>${user_details}[password]</arg>
+</arguments>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${login_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:47.794" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:47.786" endtime="20201222 11:19:47.795"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${eMailId_loc}</arg>
+<arg>${s_Wait}</arg>
+<arg>${userName}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:47.795" endtime="20201222 11:19:47.817"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:47.817" endtime="20201222 11:19:47.864"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:47.865" level="INFO">Typing text 'asdgeehjjj0001.kjd@gmail.com' into text field 'jquery=#email'.</msg>
+<status status="PASS" starttime="20201222 11:19:47.864" endtime="20201222 11:19:47.970"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:47.795" endtime="20201222 11:19:47.970"></status>
+</kw>
+<kw name="Send Keys" library="PublicLibrary">
+<doc>User defined keyword to Enter the provided text in the textbox by verifying the presence of given Element,
+and clearing the existing text</doc>
+<arguments>
+<arg>${password_loc}</arg>
+<arg>${s_wait}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:47.972" endtime="20201222 11:19:47.989"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:47.990" endtime="20201222 11:19:48.024"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${input_value}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:48.025" level="INFO">Typing text 'TempPassword' into text field 'jquery=#passwd'.</msg>
+<status status="PASS" starttime="20201222 11:19:48.025" endtime="20201222 11:19:48.110"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:47.971" endtime="20201222 11:19:48.111"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${submit_btn_loc}</arg>
+<arg>${s_Wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:48.112" endtime="20201222 11:19:48.128"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:48.128" level="INFO">Clicking element 'jquery=#SubmitLogin'.</msg>
+<status status="PASS" starttime="20201222 11:19:48.128" endtime="20201222 11:19:50.131"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:48.111" endtime="20201222 11:19:50.132"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${myStoreTitle}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:50.140" level="INFO">Page title is 'My account - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:50.132" endtime="20201222 11:19:50.140"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:47.785" endtime="20201222 11:19:50.140"></status>
+</kw>
+<kw name="Click on T-Shirts" library="MyStorePage">
+<doc>Keyword to select T-Shirts tab in Automationpractice</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${my_store_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:50.151" level="INFO">Page title is 'My account - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:50.141" endtime="20201222 11:19:50.151"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${T_shirts_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:50.152" endtime="20201222 11:19:50.191"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:50.191" level="INFO">Clicking element 'jquery=a[title='T-shirts']:eq(1)'.</msg>
+<status status="PASS" starttime="20201222 11:19:50.191" endtime="20201222 11:19:57.967"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:50.152" endtime="20201222 11:19:57.967"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${T_shirts_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:57.979" level="INFO">Page title is 'T-shirts - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:57.968" endtime="20201222 11:19:57.979"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:50.141" endtime="20201222 11:19:57.980"></status>
+</kw>
+<kw name="Add a T-Shirt to cart" library="T_ShirtsPage">
+<doc>Keyword to select first displayed T-Shirt and add it to cart.</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${T_shirts_page_title}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:57.990" level="INFO">Page title is 'T-shirts - My Store'.</msg>
+<status status="PASS" starttime="20201222 11:19:57.980" endtime="20201222 11:19:57.990"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${first_T_shirt_loc}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:57.990" level="INFO">Simulating Mouse Over on element 'jquery=.product-image-container a'.</msg>
+<status status="PASS" starttime="20201222 11:19:57.990" endtime="20201222 11:19:58.314"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${add_to_cart_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:58.316" endtime="20201222 11:19:58.339"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:19:58.339" level="INFO">Clicking element 'jquery=[title='Add to cart']'.</msg>
+<status status="PASS" starttime="20201222 11:19:58.339" endtime="20201222 11:19:58.397"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:58.315" endtime="20201222 11:19:58.398"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${added_to_cart_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:19:58.398" endtime="20201222 11:20:01.658"></status>
+</kw>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${close_pop_up_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:20:01.660" endtime="20201222 11:20:01.677"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:20:01.678" level="INFO">Clicking element 'jquery=.cross'.</msg>
+<status status="PASS" starttime="20201222 11:20:01.678" endtime="20201222 11:20:01.733"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:20:01.659" endtime="20201222 11:20:01.733"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:19:57.980" endtime="20201222 11:20:01.734"></status>
+</kw>
+<kw name="Logout from MyStore" library="HomePage">
+<doc>Keyword to logout from the MyStore application</doc>
+<kw name="Click WebElement" library="PublicLibrary">
+<doc>User defined keyword to check presence of the given Element and perform Click operation</doc>
+<arguments>
+<arg>${logout_btn_loc}</arg>
+<arg>${s_wait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>timeout=${wait_time}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:20:01.736" endtime="20201222 11:20:01.759"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20201222 11:20:01.760" level="INFO">Clicking element 'jquery=.logout'.</msg>
+<status status="PASS" starttime="20201222 11:20:01.759" endtime="20201222 11:20:04.596"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:20:01.735" endtime="20201222 11:20:04.596"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${sign_in_loc}</arg>
+</arguments>
+<status status="PASS" starttime="20201222 11:20:04.596" endtime="20201222 11:20:04.627"></status>
+</kw>
+<status status="PASS" starttime="20201222 11:20:01.734" endtime="20201222 11:20:04.628"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201222 11:20:04.628" endtime="20201222 11:20:06.937"></status>
+</kw>
+<doc>Test to Navigate to T-Shirts menu and add a product to cart</doc>
+<tags>
+<tag>Add to Cart</tag>
+</tags>
+<status status="PASS" starttime="20201222 11:19:30.342" endtime="20201222 11:20:06.937" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201222 11:17:59.299" endtime="20201222 11:20:06.940"></status>
+</suite>
+<status status="PASS" starttime="20201222 11:17:59.294" endtime="20201222 11:20:06.945"></status>
+</suite>
+<status status="PASS" starttime="20201222 11:17:59.292" endtime="20201222 11:20:06.956"></status>
+</suite>
+<status status="PASS" starttime="20201222 11:17:59.267" endtime="20201222 11:20:06.958"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0">Add to Cart</stat>
+<stat pass="1" fail="0">Login</stat>
+<stat pass="1" fail="0">Registration</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" id="s1" name="RobotFrameWork">RobotFrameWork</stat>
+<stat pass="4" fail="0" id="s1-s1" name="Application">RobotFrameWork.Application</stat>
+<stat pass="4" fail="0" id="s1-s1-s1" name="TestSuites">RobotFrameWork.Application.TestSuites</stat>
+<stat pass="4" fail="0" id="s1-s1-s1-s1" name="Assignment02">RobotFrameWork.Application.TestSuites.Assignment02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
